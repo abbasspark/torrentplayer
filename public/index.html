@@ -140,13 +140,10 @@
             console.log(e.data);
           }
           if (e.name == window.webtor.CURRENT_TIME) {
-            console.log(e.data);
-            //  document.getElementById("current-time").innerHTML = parseInt(
-            //  e.data
-            //  );
+            document.getElementById("current-time").innerHTML = e.data;
           }
           if (e.name == window.webtor.DURATION) {
-            document.getElementById("duration").innerHTML = parseInt(e.data);
+            document.getElementById("duration").innerHTML = e.data;
           }
           if (e.name == window.webtor.OPEN_SUBTITLES) {
             console.log(e.data);
