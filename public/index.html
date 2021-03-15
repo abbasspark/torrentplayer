@@ -99,7 +99,7 @@
               var a = document.createElement("a");
               a.setAttribute("href", f.path);
               a.innerText = f.name;
-              files.appendChild(a);
+              //files.appendChild(a);
               a.addEventListener("click", function (e) {
                 e.preventDefault();
                 p.open(e.target.getAttribute("href"));
@@ -151,10 +151,7 @@
         },
       });
     </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@webtor/player-sdk-js@0.2.12/dist/index.min.js"
-      charset="utf-8"
-    ></script>
+    <script src="../dist/index.min.js" charset="utf-8"></script>
 
     <!--
       This HTML file is a template.
