@@ -140,9 +140,10 @@
             console.log(e.data);
           }
           if (e.name == window.webtor.CURRENT_TIME) {
-            document.getElementById("current-time").innerHTML = parseInt(
-              e.data
-            );
+            console.log(e.data);
+            //  document.getElementById("current-time").innerHTML = parseInt(
+            //  e.data
+            //  );
           }
           if (e.name == window.webtor.DURATION) {
             document.getElementById("duration").innerHTML = parseInt(e.data);
