@@ -94,6 +94,7 @@
         on: function (e) {
           if (e.name == window.webtor.TORRENT_FETCHED) {
             console.log("Torrent fetched!", e.data.files);
+            console.log({ window97: window });
             var p = e.player;
             var files = document.getElementById("files");
             for (const f of e.data.files) {
@@ -152,7 +153,6 @@
           }
         },
       });
-      console.log({ window155: window });
     </script>
     <script src="../dist/index.min.js" charset="utf-8"></script>
 
