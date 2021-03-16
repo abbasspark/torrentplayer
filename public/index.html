@@ -66,8 +66,9 @@
     <script>
       var queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
-      console.log({ window });
+
       window.webtor = window.webtor || [];
+      console.log({ window71: window });
       window.webtor.push({
         id: "player",
         baseUrl: "https://webtor.io",
@@ -151,7 +152,7 @@
           }
         },
       });
-      console.log({ webtor: window.webtor });
+      console.log({ window155: window });
     </script>
     <script src="../dist/index.min.js" charset="utf-8"></script>
 
