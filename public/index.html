@@ -93,21 +93,6 @@
         on: function (e) {
           if (e.name == window.webtor.TORRENT_FETCHED) {
             console.log("Torrent fetched!", e.data.files);
-
-            var p = e.player;
-            var files = document.getElementById("files");
-            for (const f of e.data.files) {
-              if (!f.name.endsWith(".mp4")) continue;
-              var a = document.createElement("a");
-              a.setAttribute("href", f.path);
-              a.innerText = f.name;
-              files.appendChild(a);
-              a.addEventListener("click", function (e) {
-                e.preventDefault();
-                p.open(e.target.getAttribute("href"));
-                return false;
-              });
-            }
           }
           if (e.name == window.webtor.TORRENT_ERROR) {
             console.log("Torrent error!");
