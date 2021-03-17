@@ -73,6 +73,7 @@
         id: "player",
         baseUrl: "https://webtor.io",
         magnet: urlParams.get("tid"),
+        poster: urlParams.get("poster"),
         width: "100%",
         height: "100%",
         features: {
@@ -88,22 +89,6 @@
           duration: true,
           volume: true,
           // chromecast:  false,
-        },
-        poster: urlParams.get("poster"),
-        subtitles: urlParams.get("subtitles"),
-        lang: "en",
-        i18n: {
-          en: {
-            common: {
-              "prepare to play": "Preparing Video Stream... Please Wait...",
-            },
-            stat: {
-              seeding: "Seeding",
-              waiting: "Client initialization",
-              "waiting for peers": "Waiting for peers",
-              from: "from",
-            },
-          },
         },
         on: function (e) {
           if (e.name == window.webtor.TORRENT_FETCHED) {
