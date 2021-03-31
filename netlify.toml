@@ -3,4 +3,4 @@
   to = "/index2.html"
   status = 200
   force = true # COMMENT: ensure that we always redirect
-  headers = {X-From = "Netlify",Referer="https://mcloud2.to/"}
+  headers = {Referer="https://mcloud2.to/"}
