@@ -72,7 +72,8 @@
           .get(url, {
             headers: {
               accept: "application/json, text/javascript, */*; q=0.01",
-              "x-referer": "https://mcloud2.to/embed/" + urlParams.get("code"),
+              referer: "https://mcloud2.to/embed/" + urlParams.get("code"),
+              "Access-Control-Allow-Headers": "referer",
             },
           })
           .then((res) => {
