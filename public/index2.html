@@ -49,10 +49,10 @@
         let url = "https://mcloud2.to/info/" + urlParams.get("code");
         axios
           .get(url, {
-              headers:{
-                  "x-requested-with":"XMLHttpRequest",
-                  referer:'https://mcloud2.to/embed/'
-              }
+            headers: {
+              "x-requested-with": "XMLHttpRequest",
+              referer: "https://mcloud2.to/embed/",
+            },
             referrer: "https://mcloud2.to/embed/" + urlParams.get("code"),
             referrerPolicy: "strict-origin-when-cross-origin",
             mode: "cors",
