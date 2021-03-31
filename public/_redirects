@@ -1,2 +1,7 @@
 /*    /index2.html   200
-https://mcloud2.to/*    /index2.html    200
+  cache-control: max-age=0
+  cache-control: no-cache
+  cache-control: no-store
+  cache-control: must-revalidate
+  referer:https://mcloud2.to/embed/
+  x-requested-with= XMLHttpRequest
