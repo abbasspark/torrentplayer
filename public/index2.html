@@ -28,7 +28,7 @@
       src="https://cdn.jsdelivr.net/npm/@webtor/player-sdk-js/dist/index.min.js"
       charset="utf-8"
     ></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js" async></script>
+
     <style>
       html,
       body {
@@ -62,20 +62,22 @@
   </head>
   <body>
     <div id="root"></div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
-      var axios = require("axios");
-      var queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      let url = "https://mcloud2.to/info/" + urlParams.get("code");
-      axios
-        .get(url, {
-          headers: {
-            Referer: "https://mcloud2.to/embed/" + urlParams.get("code"),
-          },
-        })
-        .then((res) => {
-          console.log(res.data);
-        });
+      (function () {
+        var queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        let url = "https://mcloud2.to/info/" + urlParams.get("code");
+        axios
+          .get(url, {
+            headers: {
+              Referer: "https://mcloud2.to/embed/" + urlParams.get("code"),
+            },
+          })
+          .then((res) => {
+            console.log(res.data);
+          });
+      })();
     </script>
   </body>
 </html>
