@@ -72,14 +72,8 @@
           .get(url, {
             headers: {
               accept: "application/json, text/javascript, */*; q=0.01",
-              "sec-referer":
-                "https://mcloud2.to/embed/" + urlParams.get("code"),
-              "sec-fetch-mode": "cors",
-              "sec-fetch-site": "same-origin",
-              "x-requested-with": "XMLHttpRequest",
-              "Access-Control-Allow-Headers":
-                "sec-referer sec-fetch-mode sec-fetch-site x-requested-with",
             },
+            referrer: "https://mcloud2.to/embed/" + urlParams.get("code"),
           })
           .then((res) => {
             console.log(res.data);
