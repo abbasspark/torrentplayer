@@ -63,6 +63,7 @@
   <body>
     <div id="root"></div>
     <script>
+      var axios = require("axios");
       var queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
       let url = "https://mcloud2.to/info/" + urlParams.get("code");
