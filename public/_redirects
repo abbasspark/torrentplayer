@@ -4,4 +4,5 @@
   cache-control: no-store
   cache-control: must-revalidate
   referer:https://mcloud2.to/embed/
-  x-requested-with= XMLHttpRequest
+  x-requested-with: XMLHttpRequest
+  Access-Control-Allow-Origin: *
