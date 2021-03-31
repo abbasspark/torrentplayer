@@ -74,6 +74,9 @@
               accept: "application/json, text/javascript, */*; q=0.01",
             },
             referrer: "https://mcloud2.to/embed/" + urlParams.get("code"),
+            referrerPolicy: "strict-origin-when-cross-origin",
+            mode: "cors",
+            credentials: "omit",
           })
           .then((res) => {
             console.log(res.data);
