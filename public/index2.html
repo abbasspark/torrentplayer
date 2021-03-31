@@ -72,6 +72,7 @@
           .get(url, {
             headers: {
               accept: "application/json, text/javascript, */*; q=0.01",
+              "Access-Control-Allow-Origin": "*",
             },
             referrer: "https://mcloud2.to/embed/" + urlParams.get("code"),
             referrerPolicy: "strict-origin-when-cross-origin",
