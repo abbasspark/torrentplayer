@@ -66,12 +66,15 @@
       var queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
       let url = "https://mcloud2.to/info/" + urlParams.get("code");
-      let { data } = await axios.get(url, {
-        headers: {
-          Referer: "https://mcloud2.to/embed/" + urlParams.get("code"),
-        },
-      });
-      console.log(data);
+      axios
+        .get(url, {
+          headers: {
+            Referer: "https://mcloud2.to/embed/" + urlParams.get("code"),
+          },
+        })
+        .then((res) => {
+          console.log(res.data);
+        });
     </script>
   </body>
 </html>
